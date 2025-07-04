@@ -1,0 +1,106 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&family=Patrick+Hand&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #0B1320;
+    overflow-x: hidden;
+}
+
+/* Preloader Spinner */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0B1320; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease-out;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #425c89;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.foto-profile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin: 0 auto;
+    border: 3px solid #25252597;
+    background-color: #25252597;
+    padding: 1px;
+}
+
+h4{
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+p{
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.sosial-icon {
+    font-size: 24px;
+    color: white;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.sosial-icon:hover{
+    color: #425c89;
+}
+
+.btn-primary:active{
+    background-color: #425c89 !important;
+}
+
+.btn-primary{
+    font-family: "Poppins", sans-serif;
+    background-color: #151c2e;
+    transition: .3s;
+}
+
+.btn-primary:hover{
+    color: white;
+    background-color: #425c89 !important;
+}
+
+.card{
+    font-family: "Poppins", sans-serif;
+    background-color: #25252597;
+    color: white;
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    animation: fadeInUpImproved 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.card-text{
+    color: white;
+}
+
+@keyframes fadeInUpImproved {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
